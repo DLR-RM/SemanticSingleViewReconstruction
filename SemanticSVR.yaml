@@ -119,6 +119,7 @@ dependencies:
   - pip:
     - cloudpickle==2.2.0
     - pyglfw==0.2.2
+    - glfw==2.5.5
     - gdown==4.5.4
     - gitpython==3.1.29
     - decorator==5.1.1
