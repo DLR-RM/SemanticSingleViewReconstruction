@@ -1,0 +1,13 @@
+Training:
+  batch_size: 2
+  learning_rate: 1e-4
+  input_size: 512
+
+Model:
+  encoder_structure: [32, -1, 64, 64, -1, 64, 64, -1, 128, -1, 256, 256, 512]  # -1 = means pooling
+  decoder_structure: [32, -32, 64, 64, -64, 64, 64, -128, 128, -256, 256, 256, 512]  # -x, means conv2dtranpose with x filters
+  normal_filter_size: 3
+  InceptionLayer:
+    used_dilation_values: [1, 2, 4]
+    used_dilation_ratios: [0.5, 0.25, 0.25] # these have to sum up to one
+    regularizer_scale: 0.0

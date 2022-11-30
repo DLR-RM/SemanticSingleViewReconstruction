@@ -1,0 +1,9 @@
+
+DataLoader:
+  max_amount_for_files: 0
+  take_only_limited_amount_of_samples: 0
+  use_augmentations_during_training: True
+  shuffle_size: 500
+  tf_folder_path: "/home/max/workspace/SceneReconstruction/data"
+  image_size: 512
+  use_normal: True

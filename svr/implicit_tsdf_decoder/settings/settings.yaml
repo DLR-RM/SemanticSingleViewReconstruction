@@ -1,0 +1,67 @@
+DataLoader:
+  amount_of_blocks_per_voxel: 3
+  boundary_selection_scale: 1.2
+  load_only_blocks_with_boundary: true
+  min_point_amount: 0.25
+  org_trunc_threshold: 0.1
+  resolution: 16
+  tsdf_min_threshold_to_use_block: 1.0
+Generator:
+  activation_type: RELU
+  class_weighting_loss: 30.31588277256487
+  concats:
+  - false
+  - false
+  coords_size: 3
+  final_class_layers:
+  - 16
+  fourier_mapping_scale: 0.5
+  fourier_mapping_size: 64
+  fourier_use_mapping: true
+  latent_dim: 512
+  layers:
+  - 512
+  - 128
+  number_of_classes: 10
+  output_size: 1
+  sinus_w0_first: 30.0
+  sinus_w0_hidden: 1.0
+  use_batch_norm: false
+  use_classes: true
+LossManager:
+  add_corner_weights: true
+  add_sign_weights: false
+  add_surface_weights: true
+  surface_loss_type: !!python/object/apply:numpy.core.multiarray.scalar
+  - !!python/object/apply:numpy.dtype
+    args:
+    - U3
+    - false
+    - true
+    state: !!python/tuple
+    - 3
+    - <
+    - null
+    - null
+    - null
+    - 12
+    - 4
+    - 8
+  - !!binary |
+    RQAAAFgAAABQAAAA
+  surface_loss_weight: 37.27391884443913
+Training:
+  amount_of_validation_checks: 5
+  batch_size: 8
+  gen_learning_rate: 0.00015957902059049144
+  gen_steps: 1372
+  gradient_loss_scaling: 1000.0
+  gradient_size: 1.0
+  latent_learning_drop_decay: 0.75
+  latent_learning_drop_epoch_amount: 200
+  latent_learning_rate: 0.006270772405033207
+  latent_learning_rate_mode: FIXED
+  latent_steps: 1480
+  point_amount: 2048
+  summary_steps: 200
+  use_gradient_smoothing: true

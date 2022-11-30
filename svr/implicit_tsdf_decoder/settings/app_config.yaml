@@ -1,0 +1,6 @@
+DataLoader:
+  validation_size: 10000
+  shuffle_size: 100000
+  select_one_batch_per_cube: False  # set to true, if only one block is wished to be predicted
+  tf_folder_path: "/home/max/workspace/TSDFPointCompression/data"
+  mode: "normal"

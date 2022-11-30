@@ -1,0 +1,10 @@
+trained_models
+demo_output
+data
+data_generation/color_images/open_source_blenderproc
+data_generation/LossCalculator/build
+data_generation/SDFGen/build
+data_generation/tsdf_compression/Blocker/build
+*zip
+.idea/
+__pycache__

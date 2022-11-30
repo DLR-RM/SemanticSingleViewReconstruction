@@ -1,0 +1,6 @@
+
+DataLoader:
+  shuffle_size: 500
+  tf_folder_path: "/home/max/workspace/NormalReconstruction/data"
+  image_size: 512
+  use_normal: True

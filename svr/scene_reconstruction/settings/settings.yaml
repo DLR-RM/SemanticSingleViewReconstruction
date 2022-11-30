@@ -1,0 +1,35 @@
+Training:
+  batch_size: 2
+  use_normal: True
+  learning_rate: 1e-4
+
+TreeModel:
+  input_structure: [32, -1, 64, -1, 64, -1, 128, -1, 256, -1]  # -1 = means pooling
+  normal_filter_size: 3
+  result_resolution: 16
+  amount_of_filters_in_first_3D_layer: 512
+  InceptionLayer:
+    used_dilation_values: [1, 2]
+    used_dilation_ratios: [0.5, 0.5] # these have to sum up to one
+    regularizer_scale: 0.0
+  filters_for_level: [256, 256, 256]
+  amount_of_res_block_per_level: [2, 2, 2]
+  height: 3
+  inner_tree_loss_weight: 0.4
+
+3d_layers:
+  amount_of_filters: 512
+  use_reflective_padding_3D: True
+  structure: [1, 1, 1, 1, 1, 1, 1, 1]
+  Inception3DLayer:
+    used_dilation_values: [1, 2]
+    used_dilation_ratios: [0.5, 0.5] # these have to sum up to one
+    regularizer_scale: 0.0
+  for_separable_3D:
+    use_plane_for_separable_3D: True
+    dil_values_for_separable: [1, 2]
+    dil_ratio_for_separable: [0.5, 0.25, 0.25]
+
+LossManager:
+  use_loss_shaping: True
+  non_floor_or_wall_factor: 5.0
